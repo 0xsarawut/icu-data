@@ -1,0 +1,27 @@
+
+class Token {
+	constructor(material) {
+	  this.material = material;
+	}
+   
+	go() {
+	  return `https://go.getblock.io/${this.material}/`;
+	}
+   
+	token() {
+	  return this.material;
+	}
+}
+
+export const getblock = {
+	"shared": {
+		"eth": {
+			"mainnet": {
+				"jsonRpc": [
+					new Token ('80ff7d33579b4f93b6aa9bb6243ef73f'),
+					new Token ('ac16c1c292ee4809b91f3ac30e18236b')
+				]
+			}
+		}
+	}
+}
